@@ -1,0 +1,31 @@
+body {
+  font-size:0;
+}
+
+.tab {
+  font-size:16px;
+  border: 1px solid black;
+  display:inline-block;
+  margin: 0 auto;
+  margin-top:1em;
+  padding: 0.4em 0.4em;
+}
+
+.tab:hover {
+  background-color:#8a9aa8;
+}
+
+p {
+  border: 1px solid black;
+  font-size: 16px;
+  margin-top:0;
+}
+
+.selected {
+  background-color:#8a9aa8;
+}
+
+button {
+  margin-top:1em;
+  padding: 1em 1em;
+}

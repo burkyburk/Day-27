@@ -1,0 +1,31 @@
+body {
+  font-size:16px;
+  background-size: 100%;
+}
+
+.tab {
+  font-size:16px;
+  border: 1px solid black;
+  display:inline-block;
+  margin: 0 auto;
+  margin-top:1em;
+  padding: 0.4em 0.4em;
+  background-color:rgb(254,212,130);
+}
+
+
+p {
+  border: 1px solid black;
+  font-size: 16px;
+  margin-top:0;
+  background-color:rgb(254,212,130);
+  position: inline-block;
+}
+
+
+button {
+  margin-top:1em;
+  padding: 1em 1em;
+  background-color: rgb(153,162,177);
+  position: inline-block;
+}
