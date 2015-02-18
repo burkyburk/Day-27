@@ -1,45 +1,53 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>Day 27</title>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <title>Day 27</title>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
 
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
+<body ng-app="app" background="images/bg.jpg">
+  <div class="formbody">
+   <h1><strong>Contact Us</strong></h1>
+   <h3>Name</h3>
+   <input type="text" name="fname" placeholder="John Appleseed">
+   <h3>Email</h3>
+   <input type="text" name="fname" placeholder="john@appleseed.com">
+   <h3>Website</h3>
+   <input type="text" name="fname" placeholder="http://www.johnnyappleseed.com">
+   <h3>Message</h3>
+   <textarea type="text" name="fname" placeholder="Tell me you love me..."></textarea><br>
+   <button> Submit</button>
 
-   <body ng-app="app" background="images/bg.jpg">
+  </div>
 
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-
-
-
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/angular/angular.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="../bower_components/angular/angular.min.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/myControllers.js"></script>
-        <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/myControllers.js"></script>
+  <!-- endbuild -->
 </body>
+
 </html>
