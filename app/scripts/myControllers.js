@@ -1,7 +1,6 @@
 angular.module('app.controllers', []).controller('formController', function($scope) {
 	'use strict';
 	$scope.submitSuccess = true;
-	var emailPass = false;
 	$scope.submit = function() {
 		var submitPass = 0;
 

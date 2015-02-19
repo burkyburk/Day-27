@@ -5,27 +5,13 @@
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-  <title>Day 27 form</title>
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <title>Day 27 form using angular</title>
 
-  <!-- build:css styles/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="shortcut icon" href="images/favicon.ico">
-  <script src="../bower_components/angular/angular.min.js"></script>
-  <script src="scripts/app.js"></script>
-  <script src="scripts/myControllers.js"></script>
 
-
-  <!-- endbuild -->
-
-  <!-- build:js scripts/vendor/modernizr.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
-  <!-- endbuild -->
+
 </head>
 
 <body ng-app="app" background="images/bg.jpg" ng-controller="formController">>
@@ -47,21 +33,16 @@
       <textarea type="text" ng-class="class4" ng-model="message" placeholder="Tell me you love me..."></textarea>
       <h4 ng-bind="error4"></h4>
       <button> Submit</button>
+  </div>
 
- </div>
-
-  <section class="success-page" ng-hide="submitSuccess">
+  <section ng-cloak class="success-page" ng-hide="submitSuccess">
     <h1> Thanks for contacting us {{ name }}. We have recieved your message and will be in touch with you shortly. </h1>
   </section>
 
-  <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:js scripts/main.js -->
-
-  <!-- endbuild -->
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/myControllers.js"></script>
 </body>
 
 </html>
