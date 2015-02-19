@@ -1,52 +1,63 @@
-angular.module('app.controllers', []).controller('buttonController', function($scope, $timeout) {
+angular.module('app.controllers', []).controller('formController', function($scope) {
+	'use strict';
+	$scope.submitSuccess = true;
+	var emailPass = false;
+	$scope.submit = function() {
+		var submitPass = 0;
 
-  $scope.buttonText = "Submit";
-  $scope.isLoading = "Loading...";
-  $scope.disableButton = false;
+		var errorArray = [
+			'Name cannot be left empty',
+			'Email cannot be left empty',
+			'Email must contain an "@"',
+			'Website cannot be left empty',
+			'Website must start with http://',
+			'Message cannot be left empty',
+			'I Love You, Too! Now send me a REAL message :)'
+		];
 
-  $scope.onClick = function() {
-    $scope.disableButton = true;
-    $scope.buttonText = $scope.isLoading;
-    $timeout(function(){
-      $scope.disableButton = false;
-      $scope.buttonText = "Submit"; }, 4000);
-  };
-}).controller('tabController', function($scope) {
+		if(angular.isUndefined($scope.name) || $scope.name === '') {
+			$scope.error1 = errorArray[0];
+		} else {
+			$scope.error1 = undefined;
+			submitPass++;
+		}
+		if(angular.isUndefined($scope.email) || $scope.email === '') {
+			$scope.error2 = errorArray[1];
+		}
+		else {
+			for(var i=0; i < $scope.email.length; i++) {
+				if($scope.email.indexOf('@') === -1) {
+					$scope.error2 = errorArray[2];
+				} else {
+					$scope.error2 = '';
+					submitPass++;
+				}
+			}
+		}
+		if(angular.isUndefined($scope.website) || $scope.website === '') {
+			$scope.error3 = errorArray[3];
+		} else {
+			if($scope.website.substring(0,7) === 'http://') {
+				$scope.error3 = '';
+				submitPass++;
+			} else {
+				$scope.error3 = errorArray[4];
+			}
+		}
+		if(angular.isUndefined($scope.message) || $scope.message === '') {
+			$scope.error4 = errorArray[5];
+		} else {
+			if($scope.message.substring(0,10) === 'I Love You'){
+				$scope.error4 = errorArray[6];
+			} else {
+			$scope.error4 = '';
+			submitPass++;
+		}
+	}
 
-  $scope.showOrNot = true;
+		if(submitPass === 4) {
+			$scope.submitSuccess = false;
+		}
+	};
 
-  $scope.onClick = function(tabNumber) {
-    console.log('click');
-    if(tabNumber === 1) {
-      $scope.show1 = !$scope.show1;
-      $scope.show2 = false;
-      $scope.show3 = false;
-    }
-    else if(tabNumber === 2) {
-      $scope.show2 = !$scope.show2;
-      $scope.show1 = false;
-      $scope.show3 = false;
-    }
-    else {
-      $scope.show3 = !$scope.show3;
-      $scope.show2 = false;
-      $scope.show1 = false;
-    }
-    $scope.showOrNot = !$scope.showOrNot;
-    console.log($scope.showOrNot);
-  };
-
-}).controller('likeButtonController', function($scope) {
-
-  $scope.count = 0;
-  $scope.like = 'Likes';
-
-  $scope.onClick = function() {
-    $scope.count++;
-    if($scope.count === 1) {
-      $scope.like = 'Like';
-    } else {
-      $scope.like = 'Likes';
-    }
-  };
 });
