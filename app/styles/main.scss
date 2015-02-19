@@ -1,77 +1,97 @@
 @import 'reset';
 body {
-  font-size:16px;
+  font-size: 16px;
   background-size: 100%;
   font-family: helvetica;
 }
 .formbody {
- background-color:white;
- margin: 3em 2em 5em 2em;
- padding:2em 2em;
- font-size: 1.2em;
+  background-color: white;
+  margin: 3em 2em 5em;
+  padding: 2em;
+  font-size: 1.2em;
 }
 h1 {
- font-size:2.2em;
- padding-bottom:.5em;
+  font-size: 2.2em;
+  padding-bottom: 0.5em;
 }
 h3 {
- padding-left:-.1em;
- margin-bottom:.2em;
+  padding-left: -.1em;
+  margin-bottom: 0.2em;
 }
 h4 {
-		color:red;
-  font-size:.6em;
-  margin-top:-.2em;
-	}
+  color: red;
+  font-size: 0.6em;
+  margin-top: -.2em;
+}
 input {
- width:100%;
- border-left: 2px solid black;
- height:1.6em;
- margin-bottom: 1em;
+  width: 100%;
+  border-left: 2px solid black;
+  height: 1.6em;
+  margin-bottom: 1em;
 }
 textarea {
- width:100%;
- border-left: 2px solid black;
- height:6em;
+  width: 100%;
+  border-left: 2px solid black;
+  height: 6em;
 }
 button {
- font-size: 1em;
- margin-top:1em;
- padding: 1em 1em;
- color:white;
- border:none;
- background-color: black;
- -webkit-transition: background-color 5s;
- transition: background-color 5s;
+  font-size: 1em;
+  margin-top: 1em;
+  padding: 1em;
+  color: white;
+  border: none;
+  background-color: black;
+  -webkit-transition: background-color 5s;
+  transition: background-color 5s;
 }
-button:hover{
- background-color: #88C470;
+button:hover {
+  background-color: #88c470;
 }
-
 .success-page {
-	background-color: white;
-	margin:0 auto;
-	margin:2em 2em;
-	padding:1em 1em;
-	font-weight:700;
+  background-color: white;
+  margin: 0 auto;
+  margin: 2em;
+  font-weight: 700;
 }
-input::-webkit-input-placeholder { font-size: 1em; color: #555; }
-input::-moz-placeholder { font-size: 1em; color: #555; }
-input:-ms-input-placeholder { font-size: 1em; color: #555; }
-input:-moz-placeholder { font-size: 1em; color: #555; }
-textarea::-webkit-input-placeholder { font-size: 1em; color: #555; }
-textarea::-moz-placeholder { font-size: 1em; color: #555; }
-textarea:-ms-input-placeholder { font-size: 1em; color: #555; }
-textarea:-moz-placeholder { font-size: 1em; color: #555; }
-
+input::-webkit-input-placeholder {
+  font-size: 1em;
+  color: #555;
+}
+input::-moz-placeholder {
+  font-size: 1em;
+  color: #555;
+}
+input:-ms-input-placeholder {
+  font-size: 1em;
+  color: #555;
+}
+input:-moz-placeholder {
+  font-size: 1em;
+  color: #555;
+}
+textarea::-webkit-input-placeholder {
+  font-size: 1em;
+  color: #555;
+}
+textarea::-moz-placeholder {
+  font-size: 1em;
+  color: #555;
+}
+textarea:-ms-input-placeholder {
+  font-size: 1em;
+  color: #555;
+}
+textarea:-moz-placeholder {
+  font-size: 1em;
+  color: #555;
+}
 @media screen and (min-width: 740px) {
-
-.formbody {
- margin:3em 8em 5em 8em;
-}
+  .formbody {
+    margin: 3em 8em 5em;
+  }
 }
 @media screen and (min-width: 960px) {
-.formbody{
- margin:3em 16em 5em 16em;
-}
+  .formbody {
+    margin: 3em 16em 5em;
+  }
 }
