@@ -11,7 +11,6 @@
   <link rel="shortcut icon" href="images/favicon.ico">
 
   <script src="/bower_components/modernizr/modernizr.js"></script>
-
 </head>
 
 <body ng-app="app" background="images/bg.jpg" ng-controller="formController">>
@@ -30,12 +29,13 @@
       <input type="text" ng-class="class3" ng-model="website" placeholder="http://www.johnnyappleseed.com">
       <h4 ng-bind="error3"></h4>
       <h3>Message</h3>
-      <textarea type="text" ng-class="class4" ng-model="message" placeholder="Tell me you love me..."></textarea>
+      <textarea type="text" ng-class="class4" ng-model="message" placeholder="Enter message here..."></textarea>
       <h4 ng-bind="error4"></h4>
       <button> Submit</button>
+    </form>
   </div>
 
-  <section ng-cloak class="success-page" ng-hide="submitSuccess">
+  <section class="success-page" ng-hide="submitSuccess">
     <h1> Thanks for contacting us {{ name }}. We have recieved your message and will be in touch with you shortly. </h1>
   </section>
 
